@@ -27,7 +27,8 @@ We welcome contributions to improve FoxTech. Feel free to fork the repository, r
 
 Author:
 
-David Fox (Portfolio: https:davidfoxdev.co.uk, LinkedIn: https://www.linkedin.com/in/davidfoxtechcode/)
+David Fox (Portfolio: https://davidfoxdev.co.uk, Blog: https://blog.davidfoxdev.co.uk, LinkedIn: https://www.linkedin.com/in/davidfoxtechcode/)
+
 Feedback:
 
 Your feedback is valuable! Please report any bugs, suggest improvements, or share your experience using FoxTech.# foxtech
