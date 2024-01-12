@@ -17,7 +17,7 @@ Clone the Repository: git clone https://github.com/Maesterfox/foxtech.git
 Install Dependencies: npm install
 Configure Supabase: Replace {YOUR_SUPABASE_URL} and {YOUR_SUPABASE_ANON_KEY} in .env.local with your Supabase credentials.
 Run the Project: npm run dev
-Visit the Live Site: https://foxtech.davidfoxdev.co.uk
+Visit the Live Site: https://helpdesk.davidfoxdev.co.uk
 Documentation:
 
 In progress - Coming soon!
