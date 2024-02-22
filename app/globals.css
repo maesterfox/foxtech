@@ -5,8 +5,9 @@
 
 /* base styles */
 body {
-  background-color: rgb(33, 36, 80);
+  background: linear-gradient(to right, rgb(33, 36, 80), rgb(70, 72, 117));
   @apply text-indigo-500 m-8;
+  font-family: 'Roboto', sans-serif; 
 }
 
 #text {
@@ -16,7 +17,7 @@ body {
 
 h1 {
   @apply  text-orange-400 text-3xl;
-  text-shadow: 0 0 3px orange;
+  text-shadow: 0 0 2px orange;
 }
 
 h2 {
@@ -29,11 +30,16 @@ main {
 }
 
 main>h2 {
-  @apply mb-4 pb-2 text-base;
+  @apply mb-4 pb-2 text-base text-2xl border-b-2 border-orange-300;
+  text-shadow: 0 0 2px orange;
+}
+
+p {
+  @apply my-4 text-lg;
 }
 
 p>a {
-  @apply text-indigo-300 underline;
+  @apply text-indigo-500 underline;
 }
 
 /* nav styles */
@@ -43,11 +49,11 @@ nav {
 
 nav a,
 nav span {
-  @apply text-indigo-300 transition duration-150 ease-in-out;
+  @apply text-indigo-50 transition duration-150 ease-in-out text-lg;
 }
 
 nav a:hover {
-  @apply text-orange-300;
+  @apply text-orange-400;
 }
 
 main nav {
@@ -57,18 +63,17 @@ main nav {
 /* button styles */
 button {
   background: rgb(0,3,82);
-background: radial-gradient(circle, rgba(0,3,82,1) 9%, rgba(87,108,159,1) 100%, rgba(0,1,255,1) 100%);
+  background: linear-gradient(to right, rgb(61, 68, 157), rgb(73, 74, 126));
   @apply px-3 py-2 rounded-sm flex justify-between items-center gap-2 text-sm shadow-sm transition duration-150 ease-in-out;
-  box-shadow: 0 0 2px white;
   border-radius: 12px;
   transition-duration: 0.9s ease-in-out;
-  border:rgb(192, 186, 228);
+  border: 1px solid rgba(192, 186, 228, 0.5);
 
 }
 
 button:hover {
-  box-shadow: 0 0 4px rgb(255, 255, 255);
-  transition-duration: 0.9s ease-in-out;
+  box-shadow: 0 0 2px rgb(255, 255, 255);
+  transition-duration: 0.3s ease-in-out;
 
 
 }
@@ -109,14 +114,18 @@ form button {
 /* card styles */
 .card {
   @apply bg-indigo-600 shadow-md rounded-md py-3 px-4 my-4 relative overflow-hidden;
+  background: linear-gradient(to right, rgb(61, 68, 157), rgb(73, 74, 126));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
-  @apply  text-blue-950 text-xl mb-0;
+  @apply  text-blue-950 text-2xl mb-0;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
 }
 
 .card p {
-  @apply my-4 text-sm leading-6;
+  @apply my-4 text-indigo-100 text-sm leading-6;
 }
 
 /* pill styles */
