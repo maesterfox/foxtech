@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 const rubik = Rubik({ subsets: ["latin"], preload: true });
 
 export const metadata = {
-  title: "Next.js Helpdesk",
+  title: "FoxTech Helpdesk",
   description: "My First Next.js Application",
   author: "David Fox",
 };

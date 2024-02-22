@@ -1,45 +1,47 @@
-import { notFound } from 'next/navigation'
-import { cookies } from 'next/headers'
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
 // components
-import DeleteIcon from './DeleteIcon'
+import DeleteIcon from "./DeleteIcon";
 
-export const dynamicParams = true
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
-  const supabase = createServerComponentClient({ cookies })
+  const supabase = createServerComponentClient({ cookies });
 
-  const { data: ticket } = await supabase.from('tickets')
+  const { data: ticket } = await supabase
+    .from("tickets")
     .select()
-    .eq('id', params.id)
-    .single()
+    .eq("id", params.id)
+    .single();
 
   return {
-    title: `Dojo Helpdesk | ${ticket?.title || 'Ticket not Found'}`
-  }
+    title: `FoxTech Helpdesk | ${ticket?.title || "Ticket not Found"}`,
+  };
 }
 
 async function getTicket(id) {
-  const supabase = createServerComponentClient({ cookies })
+  const supabase = createServerComponentClient({ cookies });
 
-  const { data } = await supabase.from('tickets')
+  const { data } = await supabase
+    .from("tickets")
     .select()
-    .eq('id', id)
-    .single()
+    .eq("id", id)
+    .single();
 
-    if (!data) {
-      notFound()
-    }
-  
-    return data
+  if (!data) {
+    notFound();
+  }
+
+  return data;
 }
 
 export default async function TicketDetails({ params }) {
-  const ticket = await getTicket(params.id)
+  const ticket = await getTicket(params.id);
 
-  const supabase = createServerComponentClient({ cookies })
-  const { data } = await supabase.auth.getSession()
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.auth.getSession();
 
   return (
     <main>
@@ -60,5 +62,5 @@ export default async function TicketDetails({ params }) {
         </div>
       </div>
     </main>
-  )
+  );
 }
