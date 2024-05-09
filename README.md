@@ -2,6 +2,9 @@ FoxTech: Next.js IT Helpdesk with Tailwind and Supabase
 
 FoxTech is a next-generation IT Helpdesk built with Next.js, Tailwind CSS, and Supabase. It provides a streamlined and intuitive interface for managing support tickets, user requests, and knowledge base articles.
 
+![image](https://github.com/maesterfox/foxtech/assets/23552939/f00f6066-ecfa-4ebd-8499-679c0519d085)
+
+
 Features:
 
 Ticket Management: Create, track, and resolve tickets efficiently with categories, priorities, and assigned agents.
